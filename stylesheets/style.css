@@ -1,0 +1,152 @@
+body {
+	background: #000 url(../images/moulin.png);
+	}
+h1, h2 {
+	font-family: 'Bubblegum Sans', sans-serif;
+	font-weight: normal;
+	}
+h1 {
+	font-size: 42px;
+	text-align: center;
+	color: #c8b85f;
+	margin-bottom: 30px;
+	}
+h2 {color: #c8b85f;
+	font-size: 32px;
+	text-align: right;
+	}
+a {
+	color: #c8b85f;
+	text-decoration: none;
+	}
+a:hover {
+	color: #c8b85f;
+	text-decoration: underline;
+	}
+.color-box {
+	margin-bottom: 20px;
+	border-radius: 5px;
+	border: 1px solid #333;
+	min-height: 240px;
+	}
+#box-1 {background: #000;}
+#box-2 {background: #000;}
+#box-3 {background: #000;}
+#box-4 {background: #000;}
+#box-5 {background: #000;}
+#box-6 {background: #000;}
+#hex1, #rgb1, #hex2, #rgb2, #hex3, #rgb3, #hex4, #rgb4, #hex5, #rgb5, #hex6, #rgb6 {
+	padding: 4px 5px 5px 5px;
+	background: #000;
+	border-radius: 5px;
+	margin-right: 15px;
+	}
+p.top {margin-top: 15px;}
+p #hex1, p #rgb1, p #hex2, p #rgb2, p #hex3, p #rgb3, p #hex4, p #rgb4, p #hex5, p #rgb5, p #hex6, p #rgb6 {
+	font-size: 22px;
+	color: #dadada;
+	margin-bottom: 15px;
+	}
+.color-box p {text-align: right;}
+p.promo {
+	color: #dadada;
+	margin: 20px 0;
+	}
+p.instructions, p.thanks, p.copy {color: #dadada;}
+p.thanks {
+	font-size: 13px;
+	}
+p.copy {
+	text-align: right;
+	font-size: 15px;
+	}
+.button-wrapper {
+	position: absolute;
+	width: 95%;
+	bottom: 40px;
+	}
+.button-box {
+	height: 100%;
+	width: 33%;
+	text-align: center;
+	float: left;
+	}
+.button-box a {
+	background: #000;
+	/*border: 1px solid #666;*/
+	font-size: 14px;
+	padding: 3px;
+	border-radius: 5px;
+	color: #dadada;
+	margin: 0 10%;
+	font-weight: bold;
+	}
+.button-box a:hover {
+	color: #999;
+	text-decoration: none;
+	}
+input[type="text"] {
+	width: 195px;
+	margin: 0 auto;
+	font-size: 16px;
+	box-shadow: none;
+	border: 1px solid #666;
+	border-radius: 5px;
+	}
+form {margin-bottom: 15px;}
+	
+/**
+ * Farbtastic Color Picker 1.2
+ * © 2008 Steven Wittens
+ *
+ * This program is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation; either version 2 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program; if not, write to the Free Software
+ * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
+ */
+.farbtastic {
+  position: relative;
+}
+.farbtastic * {
+  position: absolute;
+  cursor: crosshair;
+}
+.farbtastic, .farbtastic .wheel {
+  width: 195px;
+  height: 195px;
+  margin: 0 auto 15px;
+}
+.farbtastic .color, .farbtastic .overlay {
+  top: 47px;
+  left: 47px;
+  width: 101px;
+  height: 101px;
+}
+.farbtastic .wheel {
+  background: url(../images/wheel.png) no-repeat;
+  width: 195px;
+  height: 195px;
+}
+.farbtastic .overlay {
+  background: url(../images/mask.png) no-repeat;
+}
+.farbtastic .marker {
+  width: 17px;
+  height: 17px;
+  margin: -8px 0 0 -8px;
+  overflow: hidden; 
+  background: url(../images/marker.png) no-repeat;
+}
+
+@media only screen and (max-width: 1020px) {
+		h1.title {font-size: 30px;}
+}

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8" />
+
+	<!-- Set the viewport width to device width for mobile -->
+	<meta name="viewport" content="width=device-width" />
+
+	<title>Take-Five Color Palette Creator</title>
+	<meta name="description" content="Easily create a five color palette that outputs rgb and hex values. Includes random color generator for inspiration.">
+	<!-- Included CSS Files (Uncompressed) -->
+	<!--
+	<link rel="stylesheet" href="stylesheets/foundation.css">
+	-->
+
+	<!-- Included CSS Files (Compressed) -->
+	<link href='http://fonts.googleapis.com/css?family=Bubblegum+Sans' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="stylesheets/foundation.min.css">
+	<link rel="stylesheet" href="stylesheets/app.css">
+	<link rel="stylesheet" href="stylesheets/style.css">
+	<script src="javascripts/modernizr.foundation.js"></script>
+</head>
+<body>
+<div class="row">
+	<div class="three columns">
+		<p class="promo"><span>Built by <a id="promo-link" href="http://janmilosh.com" target="_blank">Jan Milosh</a></span></p>
+	</div>
+	<div class="six columns end">
+		<h1 id="title">Take-Five Color Palette Creator</h1>
+	</div>
+</div>
+<div class="row">
+	<div class="four columns">
+		<form>
+			<input type="text" id="color" name="color" value="#000000" />
+		</form>
+ 		<div id="colorpicker"></div>
+	</div>
+	<div class="four columns">
+		<div id="box-1" class="color-box">
+			<p class="top"><span id="hex1">#000000</span></p>
+			<p><span id="rgb1">rgb(0, 0, 0)</span></p>
+			<div class="button-wrapper">
+				<div class="button-box">
+					<a class="pick-button" href="#" onclick="pickColor1()">Pick</a>
+				</div>
+				<div class="button-box">
+					<a class="random-button" href="#" onclick="createRandom1()">Random</a>
+				</div>
+				<div class="button-box">
+					<a class="clear-button" onclick="clearIt1()" href="#">Clear</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="four columns">
+		<div id="box-2" class="color-box">
+		<p class="top"><span id="hex2">#000000</span></p>
+		<p><span id="rgb2">rgb(0, 0, 0)</span></p>
+			<div class="button-wrapper">
+				<div class="button-box">
+					<a class="pick-button" href="#" onclick="pickColor2()">Pick</a>
+				</div>
+				<div class="button-box">
+					<a class="random-button" href="#" onclick="createRandom2()">Random</a>
+				</div>
+				<div class="button-box">
+					<a class="clear-button" onclick="clearIt2()" href="#">Clear</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="four columns">
+		<div id="box-3" class="color-box">
+		<p class="top"><span id="hex3">#000000</span></p>
+		<p><span id="rgb3">rgb(0, 0, 0)</span></p>
+			<div class="button-wrapper">
+				<div class="button-box">
+					<a class="pick-button" href="#" onclick="pickColor3()">Pick</a>
+				</div>
+				<div class="button-box">
+					<a class="random-button" href="#" onclick="createRandom3()">Random</a>
+				</div>
+				<div class="button-box">
+					<a class="clear-button" onclick="clearIt3()" href="#">Clear</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="four columns">
+		<div id="box-4" class="color-box">
+		<p class="top"><span id="hex4">#000000</span></p>
+		<p><span id="rgb4">rgb(0, 0, 0)</span></p>
+			<div class="button-wrapper">
+				<div class="button-box">
+					<a class="pick-button" href="#" onclick="pickColor4()">Pick</a>
+				</div>
+				<div class="button-box">
+					<a class="random-button" href="#" onclick="createRandom4()">Random</a>
+				</div>
+				<div class="button-box">
+					<a class="clear-button" onclick="clearIt4()" href="#">Clear</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="four columns">
+		<div id="box-5" class="color-box">
+		<p class="top"><span id="hex5">#000000</span></p>
+		<p><span id="rgb5">rgb(0, 0, 0)</span></p>
+			<div class="button-wrapper">
+				<div class="button-box">
+					<a class="pick-button" href="#" onclick="pickColor5()">Pick</a>
+				</div>
+				<div class="button-box">
+					<a class="random-button" href="#" onclick="createRandom5()">Random</a>
+				</div>
+				<div class="button-box">
+					<a class="clear-button" onclick="clearIt5()" href="#">Clear</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="row">
+	<div class="three columns mobile-one offset-by-one">
+		<h2 id="how-to">How to:</h2>
+	</div>
+	<div class="five columns mobile-three end">
+		<p class="instructions">Use the color picker to select a color. Press "pick" to transfer that color to a section of the palette. Click "random" to get a random color, "clear" to return to black. Cut and paste a six-digit hex value (i.e. #123456) to the picker, press "pick" to transfer to palette.</p>
+	</div>
+</div>
+<div class="row">
+	<div class="six columns mobile-two">
+		<p class="thanks">The <a id="footer-link" href="http://acko.net/blog/farbtastic-jquery-color-picker-plug-in/" target="_blank">Farbtastic Color Picker</a> was used here.</p>
+	</div>
+	<div class="six columns mobile-two">
+		<p class="copy">&copy;<?php echo date("Y ");?> Jan Milosh</p>
+	</div>
+</div>	
+<!-- Included JS Files (Compressed) -->
+<script src="javascripts/foundation.min.js"></script>
+
+<!-- Initialize JS Plugins -->
+<script src="javascripts/app.js"></script>
+<script src="javascripts/farbtastic.js"></script>
+<script type="text/javascript">
+   $(document).ready(function() {
+     $('#colorpicker').farbtastic('#color');
+   });
+ </script>
+<script src="javascripts/jan.js"></script>
+
+  
+</body>
+</html>
